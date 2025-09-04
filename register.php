@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+		<img src="images/MerrickMedicalCenter.PNG" height=80px; width=80px; />
+			<div id="logo">
+				
+			</div>
+			<div id="social">
+				<ul class="contact">
+					<li><h1 id="Heading1">Registration</h1></li>
+					
+				</ul>
+			</div>
+		</div>
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="index.html" accesskey="1" title="">Homepage</a></li>
+				<li><a href="theClinic.html" accesskey="1" title="">The Clinic</a></li>
+				<li><a href="ourServices.html" accesskey="2" title="">Our Services</a></li>
+				<li><a href="#Appointment.html" accesskey="3" title="">Book an Appointment</a></li>
+				<li><a href="contactUs.html" accesskey="5" title="">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+			<div class="main">
+
+    <h1><u>Registration</u></h1>
+
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "Medical";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+$userName =  $_REQUEST['userName'];
+$password =  $_REQUEST['pass'];
+$email = $_REQUEST['email'];;
+$fName = $_REQUEST['firstName'];
+$sName = $_REQUEST['surname'];
+$gender = $_REQUEST['gender'];
+$address = $_REQUEST['address'];
+$suburb = $_REQUEST['suburb'];
+$pcode = $_REQUEST['pcode'];
+$state = $_REQUEST['state'];
+$phone = $_REQUEST['phone'];
+
+$sql = "INSERT INTO Registration VALUES ('$userName','$password', '$email', '$fName', '$sName', '$gender', '$address',
+'$suburb', '$pcode', '$state', '$phone') ";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Thank you for Registring with us. One of our staff will contact you to confirm your registration...";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+
+ 
+?>
+
+	<div id="portfolio-wrapper">
+		
+	</div>
+</div>
+<div id="footer">
+	<p>&copy; MerrickMedicalCenter 2022</p>
+</div> 
+</body>
+</html>

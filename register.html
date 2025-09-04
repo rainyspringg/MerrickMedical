@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+		<img src="images/MerrickMedicalCenter.PNG" height=80px; width=80px; />
+			<div id="logo">
+				
+			</div>
+			<div id="social">
+				<ul class="contact">
+					<li><h1 id="Heading1">Contact Us</h1></li>
+					
+				</ul>
+			</div>
+		</div>
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="index.html" accesskey="1" title="">Homepage</a></li>
+				<li><a href="theClinic.html" accesskey="1" title="">The Clinic</a></li>
+				<li><a href="ourServices.html" accesskey="2" title="">Our Services</a></li>
+				<li><a href="#Appointment.html" accesskey="3" title="">Book an Appointment</a></li>
+				<li><a href="contactUs.html" accesskey="5" title="">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+			<div class="main">
+
+    <h1><u>Registration Form</u></h1>
+    
+   <section id="boxes">
+    <table>
+    <form class="form" id="form" name="form" method="POST" action="register.php" onsubmit="return validateUserData()" >
+ 
+    <fieldset>
+      <legend>Please complete the following form to register for an account on our website</legend>
+ 
+    
+
+    <tr>
+    <td><label for="userName">Username:</label></td>
+    <td><input type="text" id="userName" name="userName" placeholder="Enter the username.."/></td>
+    <td><label style="color:red; font-size: smaller; float: left;" id="errorUserName"></label></td>
+    </tr>
+
+
+    <tr>
+    <td><label for="email">Email Address: </label></td>
+    <td><input type="text" id="email" name="email" placeholder="Enter email.."></td>
+    <td><label style="color:red; font-size: smaller; float: left;" id="errorEmail"></label></td>
+    </tr>
+
+
+    <tr>
+    <td><label for="pass">Password: </label></td>
+    <td><input type="password" id="pass" name="pass" placeholder="Enter password.."></td>
+    <td><label style="color:red; font-size: smaller; float: left;" id="errorPass"></label></td>
+    </tr>
+
+
+    <tr>
+    <td><label for="pass2">Confirm Password: </label></td>
+    <td><input type="password" id="pass2" name="pass2" placeholder="re-enter password.."></td>
+    <td><label style="color:red; font-size: smaller; float: left;" id="errorPass2"></label></td>
+    </tr>
+
+    <tr>
+    <td><label for="firstName">First Name: </label></td>
+    <td><input type="text" id="firstName" name="firstName" placeholder="Enter first name.."></td>
+    <td><label style="color:red; font-size: smaller; float: left;" id="errorFirstName"></label></td>
+    </tr>
+
+
+    <tr>
+    <td><label for="surname">Surname: </label></td>
+    <td><input type="text" id="surname" name="surname" placeholder="Enter surname.."></td>
+   <td><label style="color:red; font-size: smaller; float: left;" id="errorSurname"></label></td>
+    </tr>
+
+
+     <tr>
+      <td><label for ="gender">Gender: </label></td>
+      <td><input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </td>
+      <td><label style="color:red; font-size: smaller; float: left;" id="errorGender"></label></td>
+    </tr>
+
+
+    <tr>    
+    <td><label for="address">Address: </label></td>
+    <td><input type="text" id="address" name="address" placeholder="Enter address.."></td>
+    <td><label style="color:red; font-size: smaller; float: left;" id="errorAddress"></label></td>
+    </tr>
+
+
+     <tr>
+    <td><label for="suburb">Suburb: </label></td>
+    <td><input type="text" id="suburb" name="suburb" placeholder="Enter suburb.."></td>
+    <td><label style="color:red; font-size: smaller; foloat: left;" id="errorSuburb"></label></td>
+    </tr>
+
+
+
+    <tr>
+    <td><label for="pcode">Postcode: </label></td>
+    <td><input type="text" id="pcode" name="pcode" placeholder="Enter postcode.."></td>
+    <td><label style="color:red; font-size: smaller; float: left;" id="errorPcode"></label></td>
+    </tr>
+
+
+    <tr>
+  <td><label for="state">State: </label></td>
+  <td><select name="state" id="state">
+    <option value="0">Select</option>
+    
+    <option value="1">ACT</option>
+    
+    <option value="2">NSW</option>
+   
+    <option value="3">NT</option>
+   
+    <option value="4">QLD</option>
+    
+    <option value="5">SA</option>
+    
+    <option value="6">TAS</option>
+    
+    <option value="7">VIC</option>
+    
+    <option value="8">WA</option>
+    
+  </select></td>
+  <td><label style="color:red; font-size: smaller; float: left;" id="errorState"></label></td>
+</tr>
+
+
+    <tr>
+    <td><label for="phone">Phone Number: </label></td>
+    <td><input type="text" id="phone" name="phone" placeholder="Enter phone number.."></td><td><label style="color:red; font-size: smaller; float: left;" id="errorPhone"></label></td>
+  </tr>
+ 
+
+  <tr>
+    <td><br><br><button id="button" onmouseover="changeBColor(this, 'cadetblue')"  onmouseout="changeBColor(this, 'lightgrey')">Submit</button></td> 
+
+      
+     <td><br><br><button id="button" type="reset" onmouseover="changeBColor(this, '#e8491d')" onmouseout="changeBColor(this, 'lightgrey')" onclick="return formReset()">Clear</button></td> </tr>
+  
+  
+  </fieldset>
+
+</form>
+</table>
+   
+	<div id="portfolio-wrapper">
+		
+	</div>
+</div>
+<div id="footer">
+	<p>&copy; MerrickMedicalCenter 2022</p>
+</div>
+<script type = 'text/javascript' src="Registration.js">
+    </script> 
+</body>
+</html>
